@@ -1,0 +1,319 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+  font-weight: 400;
+}
+
+@media only screen and (max-width: 37.5em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: 'poppins', sans-serif;
+  background-color: #CCDBDC;
+}
+
+.container {
+  padding: 2rem 3rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.container .title {
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+  font-size: 3.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #003249;
+}
+
+.container .description {
+  text-align: center;
+  font-size: 1.7rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  color: #003249;
+}
+
+.survey-form {
+  padding: 2rem;
+  border-radius: 4px;
+  -webkit-box-shadow: 0.2px 0.2px 2px rgba(0, 0, 0, 0.4);
+          box-shadow: 0.2px 0.2px 2px rgba(0, 0, 0, 0.4);
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 126, 167, 0.3)));
+  background-image: linear-gradient(to right, rgba(0, 126, 167, 0.3) rgba(128, 206, 215, 0.7));
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-column-gap: 2rem;
+  grid-row-gap: 0;
+      grid-template-areas: "name email" "age gender" "stack stack" "mode mode" "text text" "button button";
+}
+
+@media only screen and (max-width: 37.5em) {
+  .survey-form {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "name" "email" "age" "gender" "stack" "mode" "text" "button";
+  }
+}
+
+.survey-form .name {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: name;
+}
+
+.survey-form .email {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: email;
+}
+
+.survey-form .age {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: age;
+}
+
+.survey-form .gender {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: gender;
+}
+
+.survey-form .stack,
+.survey-form .modes {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: stack;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+  -ms-grid-rows: auto auto;
+      grid-template-rows: auto auto;
+  grid-column-gap: 1rem;
+  grid-row-gap: 0;
+}
+
+.survey-form .stack-label,
+.survey-form .modes-label {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: -1;
+}
+
+.survey-form .modes {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: mode;
+}
+
+.survey-form .text {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: text;
+}
+
+.survey-form .btn {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: button;
+  display: block;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  padding: 1.4rem 0;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  outline: none;
+  background-color: #003249;
+  color: #fff;
+  cursor: pointer;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.survey-form .btn:hover {
+  -webkit-transform: translateY(-0.1rem);
+          transform: translateY(-0.1rem);
+}
+
+.survey-form__group {
+  margin-bottom: 2rem;
+}
+
+.survey-form select {
+  width: 100%;
+  padding: 1rem .5rem;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  outline: none;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .survey-form select {
+    width: 25%;
+  }
+}
+
+.survey-form select::-webkit-input-placeholder {
+  text-transform: capitalize;
+  font-size: 1.4rem;
+  color: #687987;
+}
+
+.survey-form select:-ms-input-placeholder {
+  text-transform: capitalize;
+  font-size: 1.4rem;
+  color: #687987;
+}
+
+.survey-form select::-ms-input-placeholder {
+  text-transform: capitalize;
+  font-size: 1.4rem;
+  color: #687987;
+}
+
+.survey-form select::placeholder {
+  text-transform: capitalize;
+  font-size: 1.4rem;
+  color: #687987;
+}
+
+.survey-form__input {
+  width: 100%;
+  padding: 1rem .5rem;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  outline: none;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+.survey-form__input::-webkit-input-placeholder {
+  text-transform: capitalize;
+  font-size: 1.4rem;
+  color: #687987;
+}
+
+.survey-form__input:-ms-input-placeholder {
+  text-transform: capitalize;
+  font-size: 1.4rem;
+  color: #687987;
+}
+
+.survey-form__input::-ms-input-placeholder {
+  text-transform: capitalize;
+  font-size: 1.4rem;
+  color: #687987;
+}
+
+.survey-form__input::placeholder {
+  text-transform: capitalize;
+  font-size: 1.4rem;
+  color: #687987;
+}
+
+.survey-form__input:focus {
+  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  border-bottom: 3px solid #003249;
+}
+
+.survey-form__input:focus:invalid {
+  border-bottom: 3px solid #ff7730;
+}
+
+.survey-form__input:focus::-webkit-input-placeholder {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.survey-form .label {
+  display: block;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #fff;
+  margin-bottom: .4rem;
+}
+
+.survey-form textarea {
+  width: 100%;
+  resize: none;
+  outline: none;
+  padding: .5rem;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.survey-form textarea::-webkit-input-placeholder {
+  text-transform: capitalize;
+  color: #687987;
+  font-size: 1.4rem;
+}
+
+.survey-form textarea:-ms-input-placeholder {
+  text-transform: capitalize;
+  color: #687987;
+  font-size: 1.4rem;
+}
+
+.survey-form textarea::-ms-input-placeholder {
+  text-transform: capitalize;
+  color: #687987;
+  font-size: 1.4rem;
+}
+
+.survey-form textarea::placeholder {
+  text-transform: capitalize;
+  color: #687987;
+  font-size: 1.4rem;
+}
+
+.survey-form textarea:focus::-webkit-input-placeholder {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.survey-form select {
+  text-align-last: center;
+  font-size: 1.4rem;
+  color: #687987;
+}
+
+.survey-form .stacks,
+.survey-form .mode {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.4rem;
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+
+.survey-form .stacks label,
+.survey-form .mode label {
+  margin-left: .5rem;
+}

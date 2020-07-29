@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Poppins:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Survey Form</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="title" class="title">
+            freeCodeCamp Survey Form
+        </h1>
+        <p id="description" class="description">
+            Thank you for taking out time to fill this survey
+        </p>
+        <form id="survey-form" class="survey-form">
+            <div class="survey-form__group name">
+                <label for="name" id="name-label" class="label">Name</label>
+                <input type="text" id="name" class="survey-form__input" placeholder="enter name" required>
+            </div>
+            <div class="survey-form__group email">
+                <label for="email" id="email-label" class="label">Email</label>
+                <input type="email" id="email" class="survey-form__input" placeholder="enter email" required>
+            </div>
+            <div class="survey-form__group age">
+                <label for="number" id="number-label" class="label">Age</label>
+                <input type="number" id="number" class="survey-form__input" placeholder="enter age" min="10" max="70" required>
+            </div>
+            <div class="survey-form__group gender">
+                <label for="dropdown" class="label">Gender</label>
+                <select name="gender" id="dropdown">
+                    <option value="">-- gender --</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+            <div class="survey-form__group stack">
+                <p id="stack-label" class="label stack-label">What is your stack?</p>
+                <div class="front-end stacks">
+                    <input type="radio" name="stack" id="front-end" value="Front End">
+                    <label for="front-end" id="front-end-label">Front End</label>
+                </div>
+                <div class="back-end stacks">
+                    <input type="radio" name="stack" id="back-end" value="Back End">
+                    <label for="back-end" id="back-end-label">Back End</label>
+                </div>
+                <div class="full-stack stacks">
+                    <input type="radio" name="stack" id="full-stack" value="Full stack">
+                    <label for="full-stack" id="full-stack-label">Full stack</label>
+                </div>
+            </div>
+            <div class="survey-form__group modes">
+                <p id="learning-mode-label" class="label modes-label">What is your prefered mode of learning?</p>
+                <div class="books mode">
+                    <input type="checkbox" name="mode-of-learning" id="books" value="Books">
+                    <label for="books" id="books-label">Books</label>
+                </div>
+                <div class="videos mode">
+                    <input type="checkbox" name="mode-of-learning" id="videos" value="videos">
+                    <label for="videos" id="videos-label">Videos</label>
+                </div>
+                <div class="podcasts mode">
+                    <input type="checkbox" name="mode-of-learning" id="podcasts" value="podcasts">
+                    <label for="podcasts" id="podcasts-label">Podcasts</label>
+                </div>
+
+            </div>
+            <div class="survey-form__group text">
+                <label for="comments" class="label">Any comments or suggestions?</label>
+                <textarea name="" id="comments" cols="30" rows="10"
+                    placeholder="Enter comments or suggestions..."></textarea>
+            </div>
+            <input type="submit" value="submit" id="submit" class="btn">
+        </form>
+    </div>
+
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>
